@@ -13,6 +13,14 @@ const routes = [
         }
     },
     {
+        path: '/register',
+        name: '注册',
+        component: () => import('./views/user/Register.vue'),
+        meta: {
+            title: '注册'
+        }
+    },
+    {
         path: '/home',
         name: '首页',
         component: () => import('./views/user/Home.vue'),
@@ -61,7 +69,8 @@ const routes = [
         meta: {
             title: '个人信息'
         }
-    }
+    },
+
 
 ];
 export default new Router({

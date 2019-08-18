@@ -9,10 +9,11 @@
                     <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
                 </el-col>
 
-                <el-col :span='6' :style="{ height: '15px' }" class="user-info right">
+                <el-col :span='4' :style="{ height: '15px' }" class="user-info right">
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"
                              background-color="#faffb7">
-                        <el-menu-item index="1">首页</el-menu-item>
+
+<!--                        ?????-->
                         <el-submenu index="2">
                             <template slot="title">账户名XXX</template>
                             <el-menu-item index="2-1">注册</el-menu-item>
@@ -91,6 +92,9 @@
     .el-header {
         background: #faffb7;
         padding: 0;
+    }
+    .el-menu-demo{
+        height: 20px;
     }
     /*.el-dropdown-link {*/
     /*    cursor: pointer;*/
