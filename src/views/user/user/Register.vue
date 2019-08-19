@@ -1,9 +1,9 @@
 <template>
     <el-container class="bg">
-        <el-main style="margin-top: 80px">
-            <el-row type="flex" justify="center">
+        <el-main>
+            <el-row type="flex" justify="center" style="margin-top: 60px">
                 <el-col span="10">
-                    <el-card class="bg-card">
+                    <el-card class="bg-register">
                         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
                             <el-form-item label="账号" prop="name">
                                 <el-input v-model="ruleForm.name"></el-input>
@@ -22,6 +22,17 @@
                     </el-card>
                 </el-col>
             </el-row>
+            <el-row style="margin-top: 25px">
+                <el-col span="3" offset="15">
+                    <el-link :underline="false" style="font-size: 16px; color: white;" @click="toHome">
+                        跳过<i class="el-icon-s-promotion el-icon--right"></i> </el-link>
+                </el-col>
+            </el-row>
+            <el-row>
+                <el-col span="8" offset="4">
+                    <GatherInfo></GatherInfo>
+                </el-col>
+            </el-row>
         </el-main>
     </el-container>
 </template>
@@ -34,7 +45,7 @@
                 ruleForm:{
                     name: '',
                     password: '',
-                    checkPass: ''
+                    checkPass: '',
                 },
                 rules:{
                     name: [
@@ -53,7 +64,7 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        alert('submit!');
+                        this.$router.push('/home')
                     } else {
                         return false;
                     }
@@ -61,16 +72,19 @@
             },
             resetForm(formName) {
                 this.$refs[formName].resetFields();
-            }
+            },
         }
     }
 </script>
 
-<style scoped>
+<style>
     .bg{
         height: 700px;
-        background: url("./assets/images/bg_register.jpeg") no-repeat;
+        background: url("../../../assets/images/bg_register.jpeg") no-repeat;
         background-size: cover;
+    }
+    .bg-register{
+        background: rgba(0,0,0,0.3);
     }
 
 </style>

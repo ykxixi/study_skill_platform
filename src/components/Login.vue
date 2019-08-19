@@ -37,7 +37,7 @@
 </script>
 
 <style>
-    .bg-card{
+    .bg-card-login{
         color: white;
         background: rgba(0,0,0,0.5);
     }

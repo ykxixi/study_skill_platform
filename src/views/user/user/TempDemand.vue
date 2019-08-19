@@ -1,10 +1,10 @@
 <template>
-
+ <div>发布临时需求</div>
 </template>
 
 <script>
     export default {
-        name: "MyCourse_sd"
+        name: "TempDemand"
     }
 </script>
 

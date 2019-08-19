@@ -15,7 +15,7 @@ const routes = [
     {
         path: '/register',
         name: '注册',
-        component: () => import('./views/user/Register.vue'),
+        component: () => import('./views/user/user/Register.vue'),
         meta: {
             title: '注册'
         }
@@ -28,46 +28,89 @@ const routes = [
             title: 'study&skill首页'
         },
         children:[
+
+        ]
+    },
+    {
+        path: '/index',
+        name: '搜索',
+        component: () => import('./views/user/user/Index.vue'),
+        meta: {
+            title: '搜索'
+        }
+    },
+    {
+        path: '/course-list',
+        name: '推荐课程列表',
+        component: () => import('./views/user/course/CourseList.vue'),
+        meta: {
+            title: '推荐课程列表'
+        }
+    },
+    {
+        path: '/teacher-list',
+        name: '推荐教师列表',
+        component: () => import('./views/user/course/CourseList.vue'),
+        meta: {
+            title: '推荐教师列表'
+        }
+    },
+    {
+        path: '/personal-center',
+        name: '个人中心',
+        component: () => import('./views/user/user/PersonalCenter.vue'),
+        meta: {
+            title: '个人中心'
+        },
+        children: [
             {
-                path: '/info',
-                name: '信息',
-                component: () => import('./views/user/Info.vue'),
+                path: '/user-info',
+                name: '个人信息',
+                component: () => import('./views/user/user/UserInfo.vue'),
                 meta: {
-                    title: '信息'
+                    title: '个人信息'
                 }
             },
             {
-                path: '/course-list',
-                name: '课程列表',
-                component: () => import('./views/user/CourseList.vue'),
+                path: '/gather-info',
+                name: '采集信息',
+                component: () => import('./views/user/user/GatherInfo.vue'),
                 meta: {
-                    title: '课程商城'
+                    title: '采集信息'
                 }
             },
             {
-                path: '/shopping-mall',
-                name: '积分商城',
-                component: () => import('./views/user/ShoppingMall.vue'),
+                path: '/my-course',
+                name: '我的课程',
+                component: () => import('./views/user/user/MyCourse.vue'),
                 meta: {
-                    title: '积分商城'
+                    title: '我的课程'
+                }
+            },
+            {
+                path: '/temp-demand',
+                name: '临时需求',
+                component: () => import('./views/user/user/TempDemand.vue'),
+                meta: {
+                    title: '我的课程'
                 }
             },
         ]
     },
     {
-        path: '/my-course',
-        name: '学生_我的课程',
-        component: () => import('./views/user/MyCourse'),
+        path: '/shopping-mall',
+        name: '积分商城',
+        component: () => import('./views/user/user/ShoppingMall.vue'),
         meta: {
-            title: '我的课程'
+            title: '积分商城'
         }
     },
     {
-        path: '/user-info',
-        name: '个人信息',
-        component: () => import('./views/user/UserInfo'),
+        path: '/info',
+        name: '管理员-发布信息',
+        component: () => import('./views/user/admin/Info.vue'),
         meta: {
-            title: '个人信息'
+            title: '信息'
         }
     },
 

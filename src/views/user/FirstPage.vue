@@ -16,7 +16,7 @@
         <el-main class="main-bg">
             <el-row>
                 <el-col span="2" offset="11">
-                    <el-button style="margin-top: 400px" type="primary" @click="jump">Go! Study&Skill</el-button>
+                    <el-button style="margin-top: 400px" type="primary" @click="jump">Go!</el-button>
                 </el-col>
                 <el-col span="6" offset="5" style="margin-top: 60px">
                     <Login v-show="showL"></Login>
@@ -40,7 +40,6 @@
         components: {Login},
         data(){
             return{
-                showR: false,
                 showL: false
             }
         },
@@ -63,7 +62,7 @@
 
 <style scoped>
     .bg{
-        background: url("./assets/images/bg_fp.jpeg") no-repeat;
+        background: url("../../assets/images/bg_fp.jpeg") no-repeat;
         background-size: cover;
     }
     .main-bg{
