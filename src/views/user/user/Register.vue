@@ -22,17 +22,17 @@
                     </el-card>
                 </el-col>
             </el-row>
-            <el-row style="margin-top: 25px">
-                <el-col span="3" offset="15">
-                    <el-link :underline="false" style="font-size: 16px; color: white;" @click="toHome">
-                        跳过<i class="el-icon-s-promotion el-icon--right"></i> </el-link>
-                </el-col>
-            </el-row>
-            <el-row>
-                <el-col span="8" offset="4">
-                    <GatherInfo></GatherInfo>
-                </el-col>
-            </el-row>
+<!--            <el-row style="margin-top: 25px">-->
+<!--                <el-col span="3" offset="15">-->
+<!--                    <el-link :underline="false" style="font-size: 16px; color: white;" @click="toHome">-->
+<!--                        跳过<i class="el-icon-s-promotion el-icon&#45;&#45;right"></i> </el-link>-->
+<!--                </el-col>-->
+<!--            </el-row>-->
+<!--            <el-row>-->
+<!--                <el-col span="8" offset="4">-->
+<!--                    <GatherInfo></GatherInfo>-->
+<!--                </el-col>-->
+<!--            </el-row>-->
         </el-main>
     </el-container>
 </template>
