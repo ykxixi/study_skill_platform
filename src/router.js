@@ -21,14 +21,6 @@ const routes = [
         }
     },
     {
-        path: '/first-collection',
-        name: '初步采集信息',
-        component: () => import('./views/user/user/FirstCollection.vue'),
-        meta: {
-            title: '初步采集信息'
-        }
-    },
-    {
         path: '/home',
         name: '首页',
         component: () => import('./views/user/Home.vue'),
