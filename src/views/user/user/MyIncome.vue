@@ -1,12 +1,12 @@
 <template>
- <div>采集信息</div>
-
-
+    <div>
+        <h1>我的收益</h1>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "gatherInfo",
+        name: "MyIncome"
     }
 </script>
 

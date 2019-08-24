@@ -15,7 +15,7 @@
 
     import CourseList from "./course/CourseList";
     import Layout from "../../components/Layout";
-    import TeacherList from "./user/TeacherList";
+    import TeacherList from "./course/TeacherList";
     import Index from "./user/Index";
     export default {
         name: "Home",

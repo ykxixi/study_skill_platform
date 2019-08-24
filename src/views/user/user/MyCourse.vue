@@ -1,10 +1,12 @@
 <template>
-    <div>我的课程</div>
+    <div>
+        <h1>我的课程</h1>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "MyCourse_sd"
+        name: "MyCourse"
     }
 </script>
 

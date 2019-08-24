@@ -1,23 +1,51 @@
 <template>
     <div>
         <Layout></Layout>
-        <div style="margin: 20px">
-            <el-menu router :default-active="user-info" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-                <el-menu-item index="personal-center/user-info">个人信息</el-menu-item>
-                <el-menu-item index="personal-center/gather-info">完善信息</el-menu-item>
-                <el-menu-item index="personal-center/my-course">我的课程</el-menu-item>
-                <el-menu-item index="personal-center/temp-demand">发布临时需求</el-menu-item>
-            </el-menu>
-            <router-view></router-view>
-        </div>
+        <el-container>
+            <el-main>
+                <el-col>
+                    <el-row style="margin-top: 20px">
+                            <el-tabs :tab-position="tabPosition">
+                                <el-tab-pane label="个人信息">
+                                   <UserInfo></UserInfo>
+                                </el-tab-pane>
+                                <el-tab-pane label="完善信息">
+                                    <SelectInterest></SelectInterest>
+                                </el-tab-pane>
+                                <el-tab-pane label="发布临时需求">
+                                    <TempDemand></TempDemand>
+                                </el-tab-pane>
+                                <el-tab-pane label="我的课程">
+                                    <MyCourse></MyCourse>
+                                </el-tab-pane>
+                                <el-tab-pane label="我的收益">
+                                    <MyIncome></MyIncome>
+                                </el-tab-pane>
+                            </el-tabs>
+                    </el-row>
+                </el-col>
+            </el-main>
+        </el-container>
     </div>
+
+
 </template>
 
 <script>
     import Layout from "../../../components/Layout";
+    import SelectInterest from "./SelectInterest";
+    import UserInfo from "./UserInfo";
+    import TempDemand from "./TempDemand"
+    import MyCourse from "./MyCourse"
+    import MyIncome from "./MyIncome"
     export default {
         name: "PersonalCenter",
-        components: {Layout},
+        components: {SelectInterest, Layout,UserInfo,TempDemand,MyCourse,MyIncome},
+        data(){
+            return {
+                tabPosition:'right',
+            }
+        },
         methods:{
 
         }

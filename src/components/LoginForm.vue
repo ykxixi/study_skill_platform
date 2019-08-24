@@ -1,5 +1,6 @@
 <template>
     <el-card class="bg-card">
+        <h2>登录</h2>
         <el-form ref="form" :model="form" label-width="40px" label-position="left">
             <el-form-item label="账号">
                 <el-input v-model="form.name"></el-input>
@@ -18,7 +19,7 @@
 
 
   export default {
-    name: 'Login',
+    name: 'LoginForm',
       data(){
         return{
             form: {
@@ -38,11 +39,10 @@
 
 <style>
     .bg-card-login{
-        color: white;
-        background: rgba(0,0,0,0.5);
+        color: black;
     }
     .el-form-item__label{
-        color: white ;
+        color: black ;
     }
 
 </style>
