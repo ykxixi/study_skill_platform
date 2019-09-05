@@ -63,47 +63,47 @@ const routes = [
             title: '个人中心'
         },
         children: [
+            {
+                path: '/user-info',
+                name: '个人信息',
+                component: () => import('./views/user/user/UserInfo.vue'),
+                meta: {
+                    title: '个人信息'
+                }
+            },
+            {
+                path: '/select-interest',
+                name: '完善信息',
+                component: () => import('./views/user/user/SelectInterest.vue'),
+                meta: {
+                    title: '完善信息'
+                }
+            },
+            {
+                path: '/temp-demand',
+                name: '临时需求',
+                component: () => import('./views/user/user/TempDemand.vue'),
+                meta: {
+                    title: '发布临时需求'
+                }
+            },
+            {
+                path: '/my-course',
+                name: '我的课程',
+                component: () => import('./views/user/user/MyCourse.vue'),
+                meta: {
+                    title: '我的课程'
+                }
+            },
+            {
+                path: '/my-income',
+                name: '我的收益',
+                component: () => import('./views/user/user/MyIncome.vue'),
+                meta: {
+                    title: '我的收益'
+                }
+            },
         ]
-    },
-    {
-        path: '/user-info',
-        name: '个人信息',
-        component: () => import('./views/user/user/UserInfo.vue'),
-        meta: {
-            title: '个人信息'
-        }
-    },
-    {
-        path: '/select-interest',
-        name: '完善信息',
-        component: () => import('./views/user/user/SelectInterest.vue'),
-        meta: {
-            title: '完善信息'
-        }
-    },
-    {
-        path: '/temp-demand',
-        name: '临时需求',
-        component: () => import('./views/user/user/TempDemand.vue'),
-        meta: {
-            title: '发布临时需求'
-        }
-    },
-    {
-        path: '/my-course',
-        name: '我的课程',
-        component: () => import('./views/user/user/MyCourse.vue'),
-        meta: {
-            title: '我的课程'
-        }
-    },
-    {
-        path: '/my-income',
-        name: '我的收益',
-        component: () => import('./views/user/user/MyIncome.vue'),
-        meta: {
-            title: '我的收益'
-        }
     },
     {
         path: '/shopping-mall',
