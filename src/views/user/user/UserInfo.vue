@@ -35,7 +35,14 @@
             <el-input v-model="form.points" ></el-input>
         </el-form-item>
     </el-form>  
-    <el-button round @click="submit">保存信息</el-button>
+    <el-popover
+    placement="top-start"
+    title=""
+    width="200"
+    trigger="hover"
+    content="确认保存">
+    <el-button slot="reference">保存信息</el-button>
+  </el-popover>
  </div>
 
 
@@ -50,7 +57,8 @@
                     sex:'male',
                     points:'0'
                 },
-                imageUrl: ''
+                imageUrl: '',
+                visible:false
             }
         },
         methods:{
