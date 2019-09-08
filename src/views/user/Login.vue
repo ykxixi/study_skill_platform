@@ -1,11 +1,11 @@
 <template>
     <el-container style="height: 100%" class="bg">
-        <el-header style="background: black">
+        <el-header style="background: black; height: 30%">
             <el-row>
                 <el-col span="2" style="color: white; margin-top: 20px">
-                    网站logo
+                    <img :src="logo" style="width: 80%" alt="logo">
                 </el-col>
-                <el-col span="4" offset="17" style="color: white; margin-top: 20px;">
+                <el-col span="4" offset="17" style="color: white; margin-top: 30px;">
                     <el-link :underline="false" @click="toR" style="color: white">还没有账户？立即注册
                         <i class="el-icon-s-promotion el-icon--right"></i></el-link>
                 </el-col>
@@ -37,6 +37,7 @@
         components: {LoginForm},
         data(){
             return{
+                logo:require('../../assets/images/logo.png')
             }
         },
         methods:{
