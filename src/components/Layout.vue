@@ -5,14 +5,26 @@
                 <el-col span="2" style="margin-top: 1%">
                     <img :src="logo" @click="toHome" style="width: 80%" alt="logo" class="logo">
                 </el-col>
-                <el-col span='1' offset="16">
-                    <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-                               style="margin-top: 12px" size="middle" @click="toPersonalCenter"></el-avatar>
+
+                 <el-col span='4' offset="8" style="margin-top: 20px">
+                    <el-input v-model="searchInfo" placeholder="搜索感兴趣的课程"></el-input>
                 </el-col>
-                <el-col span="2" style="margin-top: 23px">
+                              
+                <el-col span='1'  style="margin-top: 20px">
+                    <el-button icon="el-icon-search" circle @click="toCourseSearch"></el-button>
+                </el-col>
+
+                
+                <el-col span='1' offset="2">
+                    <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+                               style="margin-top: 20px" size="middle" @click="toPersonalCenter"></el-avatar>
+                </el-col>
+                
+                
+                <el-col span="2" style="margin-top: 30px">
                     <el-link @click="toPersonalCenter" :underline="false" style="color: white">个人中心</el-link>
                 </el-col>
-                <el-col span="2" style="margin-top: 23px">
+                <el-col span="2" style="margin-top: 30px">
                     <el-link :underline="false" @click="toShoppingMall" style="color: white">积分商城</el-link>
                 </el-col>
             </el-row>
@@ -26,6 +38,7 @@
         name: "Layout",
         data() {
             return {
+                searchInfo:'',
                 logo:require('../assets/images/logo.png')
             };
         },
