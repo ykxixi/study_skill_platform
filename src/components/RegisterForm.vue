@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <el-card class="bg-register">
             <h2 style="color:white;">注册</h2>
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm" :fit="false">
