@@ -13,7 +13,7 @@
         </el-header>
         <el-main class="main-bg">
             <el-row>
-                <el-col span="6" offset="16">
+                <el-col span="7" offset="16">
                     <LoginForm class="login-form"></LoginForm>
                     <el-link class="guest-login" :underline="false" type="primary" @click="jump">以游客身份登录
                         <i class="el-icon-d-arrow-right el-icon--right"></i></el-link>
@@ -64,17 +64,12 @@
         margin-bottom: 0;
     }
     .login-form{
-        margin-top: 100px;
-        background-color: rgba(255,181,178,0.3);
+        margin-top: 50px;
+        background-color: rgba(255,255,255,0.5);
         color: white;
-    }
-    .el-form-item__label{
-        color: white;
-        font-size: 15px;
-        font-weight: 700;
     }
     .guest-login{
-        margin-top: 70px;
+        margin-top: 60px;
         font-size: 16px;
     }
     .footer{
