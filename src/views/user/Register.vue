@@ -1,13 +1,6 @@
 <template>
     <el-container class="bg">
         <el-main>
-<!--            <el-row>-->
-<!--                <el-steps :active="1" simple :space="100">-->
-<!--                    <el-step title="步骤 1" icon="el-icon-edit"></el-step>-->
-<!--                    <el-step title="步骤 2" icon="el-icon-upload"></el-step>-->
-<!--                    <el-step title="步骤 3" icon="el-icon-picture"></el-step>-->
-<!--                </el-steps>-->
-<!--            </el-row>-->
             <el-row style="margin-top: 70px">
                 <el-col>
                     <el-row>
