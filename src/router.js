@@ -31,20 +31,21 @@ const routes = [
 
         ]
     },
-    {
-        path: '/index',
-        name: '搜索',
-        component: () => import('./views/user/user/Index.vue'),
-        meta: {
-            title: '搜索'
-        }
-    },
+
     {
         path: '/course-list',
         name: '推荐课程列表',
         component: () => import('./views/user/course/CourseList.vue'),
         meta: {
             title: '推荐课程列表'
+        }
+    },
+    {
+        path: '/course-search',
+        name: '搜索课程列表',
+        component: () => import('./views/user/course/CourseSearch.vue'),
+        meta: {
+            title: '搜索课程列表'
         }
     },
     {

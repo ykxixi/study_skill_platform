@@ -3,9 +3,9 @@
   <Layout></Layout>
   <el-main>
    <el-row>picture</el-row>
-   <Index style="margin-top: 20px"></Index>
-   <CourseList style="margin-top: 20px"></CourseList>
-   <TeacherList style="margin-top: 20px"></TeacherList>
+   <!-- <Index style="margin: 50px"></Index> -->
+   <CourseList style="margin: 50px"></CourseList>
+   <TeacherList style="margin: 50px"></TeacherList>
   </el-main>
  </div>
 
@@ -16,11 +16,11 @@
     import CourseList from "./course/CourseList";
     import Layout from "../../components/Layout";
     import TeacherList from "./course/TeacherList";
-    import Index from "./user/Index";
+
     export default {
         name: "Home",
         components: {
-         Index,
+      
          TeacherList,
          Layout,
          CourseList,

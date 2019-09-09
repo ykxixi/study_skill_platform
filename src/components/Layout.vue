@@ -5,10 +5,20 @@
                 <el-col span="3" style="margin-top: 15px">
                     <el-link :underline="false" @click="toHome" style="color: white">网站logo</el-link>
                 </el-col>
-                <el-col span='1' offset="15">
+
+                <el-col span='4' offset="8" style="margin-top: 10px">
+                    <el-input v-model="searchInfo" placeholder="搜索感兴趣的课程"></el-input>
+                </el-col>
+                              
+                <el-col span='1'  style="margin-top: 10px">
+                    <el-button icon="el-icon-search" circle @click="toCourseSearch"></el-button>
+                </el-col>
+
+                <el-col span='1' offset="2">
                     <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
                                style="margin-top: 5px" size="middle" @click="toPersonalCenter"></el-avatar>
                 </el-col>
+                
                 <el-col span="2" style="margin-top: 15px">
                     <el-link @click="toPersonalCenter" :underline="false" style="color: white">个人中心</el-link>
 
@@ -38,7 +48,7 @@
         name: "Layout",
         data() {
             return {
-
+                searchInfo:''
             };
         },
         methods: {
@@ -50,6 +60,9 @@
             },
             toShoppingMall(){
                 this.$router.push('/shopping-mall')
+            },
+            toCourseSearch(){
+                this.$router.push('/course-search')
             }
         }
     }
