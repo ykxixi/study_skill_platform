@@ -1,12 +1,17 @@
 <template>
     <div>
-        <h1>我的课程</h1>
+        <Course class="course"></Course>
+        <Course class="course"></Course>
     </div>
 </template>
 
 <script>
+    import Course from '../../../components/Course.vue'
     export default {
-        name: "MyCourse"
+        name: "MyCourse",
+        components: {
+            Course
+        }
     }
 </script>
 

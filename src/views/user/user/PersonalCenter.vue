@@ -1,30 +1,37 @@
 <template>
-    <div>
+    <div class="bg">
         <Layout></Layout>
-        <el-container>
-            <el-main>
-                <el-col>
-                    <el-row style="margin-top: 20px">
-                            <el-tabs :tab-position="tabPosition">
-                                <el-tab-pane label="个人信息">
-                                   <UserInfo></UserInfo>
-                                </el-tab-pane>
-                                <el-tab-pane label="完善信息">
-                                    <SelectInterest></SelectInterest>
-                                </el-tab-pane>
-                                <el-tab-pane label="发布临时需求">
-                                    <TempDemand></TempDemand>
-                                </el-tab-pane>
-                                <el-tab-pane label="我的课程">
-                                    <MyCourse></MyCourse>
-                                </el-tab-pane>
-                                <el-tab-pane label="我的收益">
-                                    <MyIncome></MyIncome>
-                                </el-tab-pane>
-                            </el-tabs>
-                    </el-row>
-                </el-col>
+        <el-container class="bg">
+            <el-main style="margin-top: 20px;height: 100%">
+                <router-view></router-view>
             </el-main>
+            <el-aside style="margin-top: 100px;margin-right: 20px">
+                <el-card class="menu">
+                    <el-menu
+                            router
+                            default-active="user-info"
+                            class="el-menu-vertical-demo"
+                            @open="handleOpen"
+                            @close="handleClose">
+                        <el-menu-item index="user-info">
+                            <i class="el-icon-user"></i>
+                            <span slot="title">个人信息</span>
+                        </el-menu-item>
+                        <el-menu-item index="temp-demand">
+                            <i class="el-icon-lollipop"></i>
+                            <span slot="title">发布临时需求</span>
+                        </el-menu-item>
+                        <el-menu-item index="my-course">
+                            <i class="el-icon-notebook-2"></i>
+                            <span slot="title">我的课程</span>
+                        </el-menu-item>
+                        <el-menu-item index="my-income">
+                            <i class="el-icon-coin"></i>
+                            <span slot="title">我的收益</span>
+                        </el-menu-item>
+                    </el-menu>
+                </el-card>
+            </el-aside>
         </el-container>
     </div>
 
@@ -33,25 +40,39 @@
 
 <script>
     import Layout from "../../../components/Layout";
-    import SelectInterest from "./SelectInterest";
-    import UserInfo from "./UserInfo";
-    import TempDemand from "./TempDemand"
-    import MyCourse from "./MyCourse"
-    import MyIncome from "./MyIncome"
     export default {
         name: "PersonalCenter",
-        components: {SelectInterest, Layout,UserInfo,TempDemand,MyCourse,MyIncome},
+        components: {Layout},
         data(){
             return {
                 tabPosition:'right',
+                child:['./user-info','./temp-demand','./my-course','./my-income']
             }
         },
         methods:{
-
+        },
+        mounted() {
+            this.$router.push('./user-info')
         }
     }
 </script>
 
 <style scoped>
+    .bg{
+        height: 100%;
+        background: url("../../../assets/images/bg_personal2.png") no-repeat;
+        background-size: cover;
+    }
+    .menu{
+        background: rgba(255,255,255,0.5);
+        margin-bottom: 300px;
+        color: white;
+    }
+    .el-menu-vertical-demo{
+        background: inherit;
+    }
+    .el-menu-item.is-active{
+        background-color: #bcdcdd;
+    }
 
 </style>
