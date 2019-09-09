@@ -3,7 +3,7 @@
         <el-header style="height: 30%">
             <el-row>
                 <el-col span="2" style="margin-top: 1%">
-                    <img :src="logo" @click="toHome" style="width: 80%" alt="logo">
+                    <img :src="logo" @click="toHome" style="width: 80%" alt="logo" class="logo">
                 </el-col>
                 <el-col span='1' offset="16">
                     <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
@@ -57,6 +57,9 @@
         padding: 0;
         /*height: 20%;*/
 
+    }
+    .logo:hover{
+        cursor: pointer;
     }
     .pc-button{
         background-color: black;
