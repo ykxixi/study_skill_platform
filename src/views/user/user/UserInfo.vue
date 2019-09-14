@@ -89,7 +89,7 @@
             },
             alert(){
                 
-            this.$alert('', '删除成功', {
+            this.$alert('', '删除不成功', {
             confirmButtonText: '确定',
             callback: action => {
                 this.$message({
