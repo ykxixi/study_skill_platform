@@ -112,7 +112,25 @@ const routes = [
         component: () => import('./views/user/user/ShoppingMall.vue'),
         meta: {
             title: '积分商城'
-        }
+        },
+        children:[
+            {
+                path:'/gifts',
+                name:'商城礼品',
+                component:()=>import('./views/user/user/Gifts.vue'),
+                meta:{
+                    title:'商城礼品'
+                }
+            },
+            {
+                path:'/coupon-record',
+                name:'积分明细',
+                component:()=>import('./views/user/user/CouponRecord.vue'),
+                meta:{
+                    title:'积分明细'
+                }
+            }
+        ]
     },
     {
         path: '/info',
