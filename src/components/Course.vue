@@ -1,28 +1,21 @@
 <template>
-    <div>
-      <div class="gray">
-        <el-link href="#" target="_blank" class="learn">进入课程</el-link>
-        <span>
-          <span class="itemone">id</span>
-          <span class="itemone">name</span>
-        </span>
+    <div class="course">
+      <div class="title">
+<!--        <el-link href="#" target="_blank" class="learn">进入课程</el-link>-->
+        <span>课程名称</span>
       </div>
       <div class="below">
-
         <div>
-          <span class="itemtwo">授课：</span>
-          <span class="itemtwo">上课时间：</span>
-          <span class="itemtwo">价格：</span>
-          <span class="itemtwo">课程状态：</span>
-          <div class="tag">
+          <div class="time"><span>上课时间</span></div>
+          <div class="teacher"><span>授课</span></div>
+          <div class="status"><span>课程状态</span></div>
+          <div class="tags">
             <el-tag class="tag">标签一</el-tag>
             <el-tag class="tag">标签二</el-tag>
             <el-tag class="tag">标签三</el-tag>
           </div>
         </div>
       </div>
-
-
     </div>
 </template>
 
@@ -33,32 +26,38 @@
 </script>
 
 <style scoped>
-  .gray{
-    background-color: gray;
-    margin:0px;
-    width:100%;
-    height:30px;
-  }
-  .learn{
+  /**{*/
+  /*  margin:0;*/
+  /*  padding:0;*/
+  /*}*/
+  .course{
+    width:46%;
     float:left;
-    margin-left:5px;
+    margin:2%;
+    /*padding:1%;*/
+    background-color: #f5f5f5;
+    height:250px;
   }
-  .itemone{
-    margin:15px;
+
+  .course:hover{
+    /*border-top:1px solid #4FB59D;*/
+    /*transform:translateY(-5px);*/
+    box-shadow:1px 1px 2px #333333;
   }
+  .below{
+    margin:20px;
+  }
+
   .tag{
     margin:5px;
   }
-  .below{
-    border-color: #202020;
-    border-style:solid;
-    border-width:1px;
-    margin-left:0px;
-    margin-right:0px;
-    margin-top:0px;
-    margin-bottom:10px;
+  .tags{
+    margin:30px;
   }
-  .itemtwo{
-    margin:10px;
+  .title{
+    margin:30px;
+    font-size: x-large;
+    color:#47a0ff;
   }
+
 </style>

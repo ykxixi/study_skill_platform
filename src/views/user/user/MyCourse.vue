@@ -2,6 +2,11 @@
     <div>
         <Course class="course"></Course>
         <Course class="course"></Course>
+        <Course class="course"></Course>
+        <Course class="course"></Course>
+        <Course class="course"></Course>
+        <Course class="course"></Course>
+        <Course class="course"></Course>
     </div>
 </template>
 
