@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-card style="height: 500px; width: 1200px">
+        <el-card style="height: 500px; width: 100%">
             推荐教师列表
         </el-card>
     </div>

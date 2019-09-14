@@ -1,8 +1,8 @@
 <template>
     <el-card class="bg-card-login">
         <h2>登录</h2>
-        <el-form label-width="25%" label-position="left" :model="ruleForm" :rules="rules" ref="ruleForm">
-            <el-form-item label="账号" prop="name">
+        <el-form status-icon label-width="25%" label-position="left" :model="ruleForm" :rules="rules" ref="ruleForm">
+            <el-form-item label="账号" prop="name" v-loading="loading">
                 <el-input v-model="ruleForm.name"></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="password">
@@ -50,18 +50,39 @@ import Identify from './Identify'
               checked: true,
               identifyCodes: '1234567890abcdefjhijklinopqrsduvwxyz',
               identifyCode: '',
+              loading:false,
           }
       },
       methods: {
           toHome(formName) {
-              if (this.ruleForm.code.toLowerCase() !== this.identifyCode.toLowerCase()) {
-                  this.$message.error('请填写正确验证码')
+              if(!this.ruleForm.name){
+                  this.$message.error('账户名不能为空');
+                  return;
+              } else if(!this.ruleForm.password){
+                  this.$message.error('密码不能为空');
+                  return;
+              } else if (this.ruleForm.code.toLowerCase() !== this.identifyCode.toLowerCase()) {
+                  this.$message.error('请填写正确验证码');
                   this.refreshCode();
-                  return
+                  return;
               }
               this.$refs[formName].validate((valid) => {
                   if (valid) {
-                      this.$router.push('/home')
+                      let _this = this;
+                      this.loading = true;
+                      this.postRequest('/login', {
+                          username: this.ruleForm.username,
+                          password: this.ruleForm.password
+                      }).then(resp=> {
+                          _this.loading = false;
+                          if (resp && resp.status === 200) {
+                              let data = resp.data;
+                              _this.$store.commit('login', data.obj);
+                              let path = _this.$route.query.redirect;
+                              _this.$router
+                                  .replace({path: path === 'login' || path === undefined ? '/home' : path});
+                          }
+                      });
                   } else {
                       return false;
                   }
