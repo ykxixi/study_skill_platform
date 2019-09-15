@@ -6,7 +6,7 @@
                 <el-input v-model="ruleForm.name"></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="password">
-                <el-input v-model="ruleForm.password"></el-input>
+                <el-input v-model="ruleForm.password" show-password></el-input>
             </el-form-item>
             <el-form-item prop="code" label="验证码">
                 <el-col span="10">
@@ -26,6 +26,8 @@
 
 <script>
 import Identify from './Identify'
+import axios from 'axios'
+
   export default {
       name: 'LoginForm',
       components:{Identify},
@@ -66,14 +68,12 @@ import Identify from './Identify'
                   this.refreshCode();
                   return;
               }
+              let {username, password} = this.ruleForm
               this.$refs[formName].validate((valid) => {
                   if (valid) {
                       let _this = this;
                       this.loading = true;
-                      this.postRequest('/login', {
-                          username: this.ruleForm.username,
-                          password: this.ruleForm.password
-                      }).then(resp=> {
+                      this.postRequest('/login', {username, password}).then(resp=> {
                           _this.loading = false;
                           if (resp && resp.status === 200) {
                               let data = resp.data;
@@ -121,7 +121,7 @@ import Identify from './Identify'
         color: black ;
     }
     .login_remember {
-        font-weight: 300;
+        font-weight: 400;
         color: black;
         text-align: left;
     }

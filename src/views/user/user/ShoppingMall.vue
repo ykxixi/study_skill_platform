@@ -28,6 +28,9 @@
             return {
                 activeIndex: '/gifts',
             }
+        },
+        mounted() {
+            this.$router.push('/gifts')
         }
     }
 </script>

@@ -9,18 +9,29 @@
                  <el-col span='4' offset="8" style="margin-top: 20px">
                     <el-input v-model="searchInfo" placeholder="搜索感兴趣的课程"></el-input>
                 </el-col>
-                              
+
                 <el-col span='1'  style="margin-top: 20px">
                     <el-button icon="el-icon-search" circle @click="toCourseSearch"></el-button>
                 </el-col>
 
-                
+
                 <el-col span='1' offset="2">
-                    <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-                               style="margin-top: 20px" size="middle" @click="toPersonalCenter"></el-avatar>
+                    <el-dropdown trigger="hover" class="admin-info right">
+                        <img src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" alt="avatar"
+                             class="user-logo"/>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item @click.native="logout">
+                                <i class="el-icon-back"></i>
+                                <span>登出</span>
+                            </el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+
+<!--                    <el-avatar-->
+<!--                               style="margin-top: 20px" size="middle" @click="toPersonalCenter"></el-avatar>-->
                 </el-col>
-                
-                
+
+
                 <el-col span="2" style="margin-top: 30px">
                     <el-link @click="toPersonalCenter" :underline="false" style="color: white">个人中心</el-link>
                 </el-col>
@@ -39,10 +50,18 @@
         data() {
             return {
                 searchInfo:'',
-                logo:require('../assets/images/logo.png')
+                logo:require('../assets/images/logo.png'),
             };
         },
         methods: {
+            logout(){
+                this.$router.push('/');
+                this.$notify({
+                    title: '登出成功',
+                    message: '期待再次相见',
+                    type: 'success'
+                });
+            },
             toHome(){
                 this.$router.push('/home')
             },
@@ -76,6 +95,11 @@
     }
     .logo:hover{
         cursor: pointer;
+    }
+    .user-logo{
+        padding-top: 10px;
+        width: 80%;
+        border-radius: 50%;
     }
     .pc-button{
         background-color: black;

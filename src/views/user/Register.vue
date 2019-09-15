@@ -32,7 +32,7 @@
 
 <style>
     .bg{
-        height: 700px;
+        height: 800px;
         background: url("../../assets/images/bg_register3.jpg") no-repeat;
         background-size: cover;
     }
