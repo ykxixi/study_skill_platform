@@ -14,7 +14,7 @@
         name: "Gift.vue",
         data(){
             return{
-                num:0
+                num:100
             }
         }
     }
