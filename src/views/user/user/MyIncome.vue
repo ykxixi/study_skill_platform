@@ -2,6 +2,7 @@
     <div style="width: 100%;height: 100%;">
         <h1 >我的收益</h1>
         <div id="main" style="width: 60%;height: 60%;"></div>
+        <h3>总收益:23</h3>
         <h4>书中自有黄金屋，书中自有颜如玉</h4>
     </div>
 </template>
@@ -14,7 +15,7 @@
             return {
                 charts: '',
             /*  opinion: ["1", "3", "3", "4", "5"],*/
-                opinionData: ["3", "2", "4", "4", "5"]
+                opinionData: ["3", "2", "4", "4", "5","2","3"]
             }
         },
         methods: {
@@ -42,7 +43,7 @@
                     xAxis: {
                         type: 'category',
                         boundaryGap: false,
-                    data: ["1","2","3","4","5"]
+                    data: ["1","2","3","4","5","6","7"]
                     
                     },
                     yAxis: {
@@ -79,6 +80,12 @@
         margin-left: -40%
     }
     h4{
-        color: gray
+        color: gray;
+        margin-top:4%
+    }
+    h3{
+        color: brown;
+        margin-left: -40%;
+        
     }
 </style>
