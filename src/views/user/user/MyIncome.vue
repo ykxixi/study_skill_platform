@@ -2,6 +2,7 @@
     <div style="width: 100%;height: 100%;">
         <h1 >我的收益</h1>
         <div id="main" style="width: 60%;height: 60%;"></div>
+        <h4>书中自有黄金屋，书中自有颜如玉</h4>
     </div>
 </template>
 
@@ -76,5 +77,8 @@
     }
     h1{
         margin-left: -40%
+    }
+    h4{
+        color: gray
     }
 </style>
