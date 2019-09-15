@@ -1,7 +1,7 @@
 <template>
   <div class="aGift">
     <div class="img">
-      <img src="../assets/images/bg_fp.jpeg" alt="礼品图片"/>
+      <img src="../assets/images/包.jpg" alt="礼品图片"/>
     </div>
     <div class="name">礼品名称</div>
     <div class="left coupon">所需积分数</div>
