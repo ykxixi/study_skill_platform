@@ -37,6 +37,7 @@
     /*padding:1%;*/
     background-color: #f5f5f5;
     height:250px;
+    cursor:pointer;
   }
 
   .course:hover{

@@ -121,6 +121,7 @@
   float:left;
   height:350px;
   border-bottom:3px solid #DFDFDF;
+  cursor:pointer;
 }
 .aGift:hover{
   border-bottom:3px solid #4FB59D;
