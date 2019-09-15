@@ -2,17 +2,15 @@
     <div class="bg">
         <Layout></Layout>
         <el-container class="bg">
-            <el-main style="margin-top: 20px;height: 100%">
+            <el-main style="margin-top: 20px;height: 900px">
                 <router-view></router-view>
             </el-main>
             <el-aside style="margin-top: 100px;margin-right: 20px">
                 <el-card class="menu">
                     <el-menu
                             router
-                            default-active="user-info"
-                            class="el-menu-vertical-demo"
-                            @open="handleOpen"
-                            @close="handleClose">
+                            :default-active="activeIndex"
+                            class="el-menu-vertical-demo">
                         <el-menu-item index="user-info">
                             <i class="el-icon-user"></i>
                             <span slot="title">个人信息</span>
@@ -41,18 +39,22 @@
 <script>
     import Layout from "../../../components/Layout";
     export default {
+        // inject:['reload'],
         name: "PersonalCenter",
         components: {Layout},
         data(){
             return {
                 tabPosition:'right',
-                child:['./user-info','./temp-demand','./my-course','./my-income']
+                activeIndex: 'user-info'
             }
         },
         methods:{
         },
         mounted() {
-            this.$router.push('./user-info')
+            // let self = this;
+            // self.reload();
+            // this.activeIndex = 'user-info';
+            this.$router.push('user-info');
         }
     }
 </script>
